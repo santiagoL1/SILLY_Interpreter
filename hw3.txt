@@ -1,0 +1,42 @@
+list = ["dog" "cat" "ox" "fish" "zyzzyva" "cat"]
+
+shortest = (get list 0)
+longest = (get list 0)
+dupes = false
+i = 0
+
+while (< i (len list)) {
+    currentWord = (get list i)
+    
+    if (< (len currentWord) (len shortest)) {
+        shortest = currentWord
+    }
+    else {}
+
+    if (> (len currentWord) (len longest)) {
+        longest = currentWord
+    }
+    else {}
+
+    checkIndex = 0
+    while (< checkIndex i) {
+        if (== currentWord (get list checkIndex)) {
+            dupes = true
+        }
+        else {}
+        checkIndex = (+ checkIndex 1)
+    }
+
+    i = (+ i 1)
+}
+
+print (cat "shortest=" shortest)
+print (cat "longest=" longest)
+print (cat "dupes?" (str dupes))
+
+
+
+
+
+
+
